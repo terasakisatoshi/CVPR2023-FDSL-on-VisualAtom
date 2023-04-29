@@ -1,16 +1,16 @@
 version: '3'
 services:
   julia:
-    image: visualatomjl
-    container_name: visualatomjl-julia
+    image: forkvisualatomjl
+    container_name: forkvisualatomjl-julia
     volumes:
       - ./:/workspace/VisualAtom.jl
     working_dir: /workspace/VisualAtom.jl
     command: julia --project=/workspace/VisualAtom.jl
 
   pluto:
-    image: visualatomjl
-    container_name: visualatomjl-pluto
+    image: forkvisualatomjl
+    container_name: forkvisualatomjl-pluto
     volumes:
       - ./:/workspace/VisualAtom.jl
     working_dir: /workspace/VisualAtom.jl
@@ -19,16 +19,16 @@ services:
     command: julia -e 'import Pluto; Pluto.run(host="0.0.0.0", port=1234)'
 
   shell:
-    image: visualatomjl
-    container_name: visualatomjl-julia
+    image: forkvisualatomjl
+    container_name: forkvisualatomjl-julia
     volumes:
       - ./:/workspace/VisualAtom.jl
     working_dir: /workspace/VisualAtom.jl
     command: /bin/bash
 
   web:
-    image: visualatomjl
-    container_name: visualatomjl-packagedocs
+    image: forkvisualatomjl
+    container_name: forkvisualatomjl-packagedocs
     volumes:
       - ./:/workspace/VisualAtom.jl
     working_dir: /workspace/VisualAtom.jl
