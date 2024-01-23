@@ -3,7 +3,7 @@ torch==1.6.0
 torchvision==0.7.0
 wandb==0.10.12
 webdataset==0.1.62
-Pillow==9.0.0
+Pillow==10.2.0
 noise==1.2.2
 protobuf==3.20.0
 hydra-core==1.0.6
